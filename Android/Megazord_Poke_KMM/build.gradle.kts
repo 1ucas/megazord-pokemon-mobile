@@ -25,7 +25,7 @@ kotlin {
         homepage = "Link to the Shared Module homepage"
         ios.deploymentTarget = "14.1"
         frameworkName = "Megazord_Poke_KMM"
-        podfile = project.file("../Megazord_Poke_iOS/Podfile")
+        podfile = project.file("../../Megazord_Poke_iOS/Podfile")
     }
 
     val coroutinesVersion = "1.3.9-native-mt"
