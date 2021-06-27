@@ -1,0 +1,5 @@
+target 'Megazord_Poke_iOS' do
+  use_frameworks!
+  platform :ios, '14.1'
+  pod 'Megazord_Poke_KMM', :path => '../Megazord_Poke_KMM'
+end

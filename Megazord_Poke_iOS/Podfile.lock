@@ -1,0 +1,16 @@
+PODS:
+  - Megazord_Poke_KMM (1.0)
+
+DEPENDENCIES:
+  - Megazord_Poke_KMM (from `../Megazord_Poke_KMM`)
+
+EXTERNAL SOURCES:
+  Megazord_Poke_KMM:
+    :path: "../Megazord_Poke_KMM"
+
+SPEC CHECKSUMS:
+  Megazord_Poke_KMM: 87b5698360b2f21f70f10f300e3cb9389d9fa155
+
+PODFILE CHECKSUM: bb137edce965433029ff0c388d85f352b0dfeded
+
+COCOAPODS: 1.10.1
