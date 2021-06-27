@@ -9,6 +9,11 @@ import android.widget.ImageView
 import br.com.manobray.megazordpokeappp.Greeting
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
 import com.bumptech.glide.Glide
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
@@ -27,14 +32,23 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.button_others).setOnClickListener {
-            startActivity(
-                FlutterActivity.createDefaultIntent(this)
-            )
+        setContent { // In here, we can call composables!
+            MaterialTheme {
+                Column {
+                    Greeting(name = "compose")
+                    Greeting(name = "compose")
+                    Greeting(name = "compose")
+                }
+            }
         }
-        displayTopPokemon()
+        //displayTopPokemon()
+    }
+
+    @Composable
+    fun Greeting(name: String) {
+        Text(text = "Hello $name!")
     }
 
     private fun displayTopPokemon() {
@@ -47,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                 tvName.text = it.species.name
                 Glide.with(this@MainActivity).load(it.imageUrl).into(ivPokemon);
             }.onFailure {
-                Log.e("ErrorImage", it.localizedMessage)
+                Log.e("ErrorImage", it.localizedMessage?:"")
             }
         }
     }
