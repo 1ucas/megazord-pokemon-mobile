@@ -1,16 +1,26 @@
 PODS:
+  - Flutter (2.2.0)
+  - Megazord_Poke_Flutter (1.0.0)
   - Megazord_Poke_KMM (1.0)
 
 DEPENDENCIES:
+  - Flutter (from `../Megazord_Poke_Flutter/build/ios/framework/Debug/Flutter.podspec`)
+  - Megazord_Poke_Flutter (from `../Megazord_Poke_Flutter`)
   - Megazord_Poke_KMM (from `../Android/Megazord_Poke_KMM`)
 
 EXTERNAL SOURCES:
+  Flutter:
+    :podspec: "../Megazord_Poke_Flutter/build/ios/framework/Debug/Flutter.podspec"
+  Megazord_Poke_Flutter:
+    :path: "../Megazord_Poke_Flutter"
   Megazord_Poke_KMM:
     :path: "../Android/Megazord_Poke_KMM"
 
 SPEC CHECKSUMS:
+  Flutter: faaa397c68de73caf53844343130daea7779da67
+  Megazord_Poke_Flutter: 480f70046e0385a2884c93eb0a2d04194a7d3cb2
   Megazord_Poke_KMM: 87b5698360b2f21f70f10f300e3cb9389d9fa155
 
-PODFILE CHECKSUM: 6317ae0aeea560b6153153b7c3a11571dec510db
+PODFILE CHECKSUM: c024dff693adc4903ea6656af9988f6094866e91
 
 COCOAPODS: 1.10.1

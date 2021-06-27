@@ -13,6 +13,8 @@ import com.bumptech.glide.Glide
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
+import io.flutter.embedding.android.FlutterActivity
+
 
 fun greet(): String {
     return Greeting().greeting()
@@ -28,7 +30,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.button_others).setOnClickListener {
-            println("Others")
+            startActivity(
+                FlutterActivity.createDefaultIntent(this)
+            )
         }
         displayTopPokemon()
     }

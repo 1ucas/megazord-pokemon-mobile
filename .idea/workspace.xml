@@ -13,35 +13,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50a61801-cccb-4747-8d25-e3e312da0dc1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_Android/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_Android/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_Android/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_Android/src/main/java/br/com/manobray/megazordpokeappp/android/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_Android/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_Android/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_Android/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_KMM/Megazord_Poke_KMM.podspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_KMM/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_KMM/src/androidMain/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_KMM/src/androidMain/kotlin/br/com/manobray/megazordpokeappp/Platform.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_KMM/src/commonMain/kotlin/br/com/manobray/megazordpokeappp/Greeting.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_KMM/src/commonMain/kotlin/br/com/manobray/megazordpokeappp/Platform.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_KMM/src/commonMain/kotlin/br/com/manobray/megazordpokeappp/PokemonFacade.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_KMM/src/commonMain/kotlin/br/com/manobray/megazordpokeappp/network/Pokemon.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_KMM/src/commonMain/kotlin/br/com/manobray/megazordpokeappp/network/PokemonApi.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Megazord_Poke_KMM/src/iosMain/kotlin/br/com/manobray/megazordpokeappp/Platform.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" />
-    </list>
+    <list default="true" id="50a61801-cccb-4747-8d25-e3e312da0dc1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
