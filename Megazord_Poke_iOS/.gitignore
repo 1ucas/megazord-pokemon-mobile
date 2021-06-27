@@ -1,0 +1,14 @@
+*.DS_Store
+*.dSYM.zip
+Megazord_Poke_iOS.xcodeproj/xcuserdata/*
+Megazord_Poke_iOS.xcworkspace/xcuserdata/*
+*.scannerwork
+
+*/xcuserdata/*
+*./xcuserdata/*
+*.xcuserdatad/
+*.xcuserstate/
+*.scannerwork
+
+DerivedData
+Pods
