@@ -8,4 +8,8 @@ class PokemonFacade {
         return api.getCharmander()
     }
 
+    @Throws(Exception::class) suspend fun listPokemons() : List<String> {
+        return api.listPokemons().results.map { it.name }
+    }
+
 }

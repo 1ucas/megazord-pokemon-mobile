@@ -15,10 +15,15 @@ internal class PokemonApi {
     }
 
     suspend fun getCharmander(): Pokemon {
-        return httpClient.get(POKEMONS_ENDPOINT)
+        return httpClient.get(POKEMON_TOP_ENDPOINT)
+    }
+
+    suspend fun listPokemons(): PokeListResult {
+        return httpClient.get(POKEMON_LIST_ENDPOINT)
     }
 
     companion object {
-        private const val POKEMONS_ENDPOINT = "https://pokeapi.co/api/v2/pokemon/4"
+        private const val POKEMON_TOP_ENDPOINT = "https://pokeapi.co/api/v2/pokemon/4"
+        private const val POKEMON_LIST_ENDPOINT = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=9"
     }
 }

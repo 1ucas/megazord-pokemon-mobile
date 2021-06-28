@@ -30,17 +30,46 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.embedding.engine.FlutterEngineCache
+import io.flutter.embedding.engine.dart.DartExecutor
+import io.flutter.plugin.common.MethodChannel
 import kotlinx.coroutines.runBlocking
 
 class MainActivity : AppCompatActivity() {
 
     private val facade = PokemonFacade()
     private val mainScope = MainScope()
+    private val POKECHANNEL = "networking"
+    private lateinit var channel: MethodChannel
+    lateinit var flutterEngine : FlutterEngine
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_main)
 
+        flutterEngine = FlutterEngine(this)
+        flutterEngine.navigationChannel.setInitialRoute("/pokelist");
+        flutterEngine.dartExecutor.executeDartEntrypoint(
+            DartExecutor.DartEntrypoint.createDefault()
+        )
+
+        FlutterEngineCache
+            .getInstance()
+            .put("my_engine_id", flutterEngine)
+
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "networking").setMethodCallHandler {
+            // Note: this method is invoked on the main thread.
+                call, result ->
+            if (call.method == "pokelist") {
+                runBlocking {
+                    val pokemonNames = facade.listPokemons()
+                    result.success(pokemonNames)
+                }
+            } else {
+                result.notImplemented()
+            }
+        }
         setContent { // In here, we can call composables!
             MaterialTheme {
                 PokemonScreen()
@@ -81,7 +110,10 @@ class MainActivity : AppCompatActivity() {
             Text(text = pokemon.value?.species?.name ?: "")
             Button(
                 onClick = {
-                    context.startActivity(FlutterActivity.createDefaultIntent(context))
+                    val flutterActivity = FlutterActivity
+                        .withCachedEngine("my_engine_id")
+                        .build(context)
+                    context.startActivity(flutterActivity)
                 }, colors = ButtonDefaults.textButtonColors(
                     backgroundColor = Color.Blue
                 )
