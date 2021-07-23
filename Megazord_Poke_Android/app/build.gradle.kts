@@ -55,11 +55,14 @@ dependencies {
 
     implementation("com.google.accompanist:accompanist-glide:0.12.0")
 
-    implementation("br.com.manobray.megazord_poke_flutter.megazord_poke_flutter:flutter_debug:1.0")
-
     implementation("io.ktor:ktor-client-android:$ktorVersion")
     implementation("io.ktor:ktor-client-serialization:$ktorVersion")
 
+    // FLUTTER
+
+    implementation("br.com.manobray.megazord_poke_flutter.megazord_poke_flutter:flutter_debug:1.0")
+
+    // KMM
     implementation(
         fileTree("../../Megazord_Poke_KMM/module/build/outputs/aar") {
             include("*.aar")

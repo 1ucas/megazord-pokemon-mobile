@@ -24,18 +24,6 @@ struct FlutterWrapperView: UIViewControllerRepresentable {
         return flutterViewController
     }
     
-//    private func receivePokemonList(result: FlutterResult) {
-//        facade.listPokemons { list, error in
-//            if let pokelist = list {
-//                result(list)
-//            } else {
-//                result(FlutterError(code: "UNAVAILABLE",
-//                                message: "List error",
-//                                details: nil))
-//            }
-//        }
-//    }
-    
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) { }
     
     typealias UIViewControllerType = UIViewController

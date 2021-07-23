@@ -59,7 +59,6 @@ class MainActivity : AppCompatActivity() {
             .put("my_engine_id", flutterEngine)
 
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "networking").setMethodCallHandler {
-            // Note: this method is invoked on the main thread.
                 call, result ->
             if (call.method == "pokelist") {
                 runBlocking {
@@ -70,12 +69,11 @@ class MainActivity : AppCompatActivity() {
                 result.notImplemented()
             }
         }
-        setContent { // In here, we can call composables!
+        setContent {
             MaterialTheme {
                 PokemonScreen()
             }
         }
-        //displayTopPokemon()
     }
 
     @Composable
